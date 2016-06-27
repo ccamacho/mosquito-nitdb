@@ -17,7 +17,7 @@ def getNits(folder):
       try:
         doc=yaml.load(stream)
         doc['name']=nit.split('/')[2]
-        #print doc
+        print doc['err']
         pushNit(doc)
       except yaml.YAMLError as exc:
         print(exc)
