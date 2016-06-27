@@ -17,6 +17,7 @@ def getNits(folder):
       try:
         doc=yaml.load(stream)
         doc['name']=nit.split('/')[2]
+        #print doc
         pushNit(doc)
       except yaml.YAMLError as exc:
         print(exc)
@@ -36,6 +37,8 @@ else:
   exit()
 
 
+
+shutil.rmtree("tripleo-nit-db","true")
 getGit("clone", "git://github.com/ccamacho/tripleo-nit-db.git", "-b", "master")
 getNits("tripleo-nit-db/nits/*.nit")
-shutil.rmtree("tripleo-nit-db")
+shutil.rmtree("tripleo-nit-db","true")
