@@ -1,5 +1,4 @@
 author: Carlos Camacho
-date: 2016-06-24
 title: This is a dummy nit title
 related-bug: https://bugs.launchpad.net/tripleo/+bug/1590755
 err: |
