@@ -1,6 +1,6 @@
-author: Carlos Camacho
-title: This is a dummy nit title
-related-bug: https://bugs.launchpad.net/tripleo/+bug/1590755
+author: Dummy User
+title: "This is a dummy nit title"
+related-bug: https://bugs.launchpad.net/tripleo/+bug/666
 err: |
   Multiline nit error:
   map_merge:
