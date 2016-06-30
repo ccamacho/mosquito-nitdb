@@ -17,7 +17,8 @@ def getKb(es,folder):
       try:
         doc=yaml.load(stream)
         doc['name']=item.split('/')[2]
-        doc['type']=item.split('/')[1]
+        typee=item.split('/')[1]
+        doc['type']=typee[:-1]
         doc["err"]= "<br />".join(doc["err"].split("\n"))
         doc["sol"]= "<br />".join(doc["sol"].split("\n"))
         pushKb(es,doc)
