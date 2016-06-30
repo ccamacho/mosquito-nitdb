@@ -1,5 +1,5 @@
 author: Carlos Camacho
-title: "In which step should the services create and sync their databases"
+title: "In which step the services should create and sync their databases?"
 err: |
   Deployments can fail due to a misconfigured dbsync step.
 sol: |
