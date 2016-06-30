@@ -1,0 +1,14 @@
+author: Carlos Camacho
+title: "In which step should the services create and sync their databases"
+err: |
+  Deployments can fail due to a misconfigured dbsync step.
+sol: |
+  From: https://review.openstack.org/#/c/335419/
+  We used to implement a dependency in puppet using the 'galera-ready'
+  resource (clustercheck) but this is not possible with roles because we
+  also don't have any guarantee about clustercheck being installed on the
+  same node.
+  Because of the above all services must create/sync their databases
+  in a later step. This patch fixes Nova API and Neutron Server, the other
+  services use step 3 already.
+  Check: https://github.com/openstack/tripleo-heat-templates/blob/master/puppet/services/README.rst
