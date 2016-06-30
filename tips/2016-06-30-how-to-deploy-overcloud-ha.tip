@@ -1,0 +1,14 @@
+
+author: Carlos Camacho
+title: "How to deploy overcloud using pacemaker environment"
+err: |
+  Can not find information about how to deploy overcloud using ha
+  environment templates.
+sol: |
+  Using the latest version of tripleo-heat-templates from github, run:
+  openstack overcloud deploy \
+    --libvirt-type qemu \
+    --ntp-server pool.ntp.org \
+    --templates /home/stack/tripleo-heat-templates \
+    -e /home/stack/tripleo-heat-templates/overcloud-resource-registry-puppet.yaml \
+    -e /home/stack/tripleo-heat-templates/environments/puppet-pacemaker.yaml
