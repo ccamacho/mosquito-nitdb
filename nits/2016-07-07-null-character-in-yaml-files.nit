@@ -5,9 +5,9 @@ related-bug:
 err: |
   deploy_stderr: Error: Error from DataBinding
   'hiera' while looking up 'tripleo::packages::enable_install':
-  (<unknown>): found character that cannot start any token while
+  ( < unknown > ): found character that cannot start any token while
   scanning for the next token at line 210 column 25 on node
-  overcloud-controller-0.localdomain\n Wrapped exception:\n(<unknown>):
+  overcloud-controller-0.localdomain\n Wrapped exception:\n( < unknown > ):
   found character that cannot start any token while scanning
   for the next token at line 210 column 25
 sol: |
