@@ -10,3 +10,5 @@ sol: |
   step 3 which was the same of the dbsync, and we can not guarantee
   about clustercheck being installed on the same node.
   The dbsync remains on step 3 and the clustercheck will be moved to step 2.
+  Remember that the clustercheck only needs to be executed in the pacemaker
+  master node, so add a validation like "$step >= 2 and $pacemaker_master" 
