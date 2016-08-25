@@ -6,9 +6,11 @@ err: |
   The Referenced Attribute (ControllerServiceChain role_data)
   is incorrect.
 sol: |
-  This error appears sometines when a parameter is used
-  but not declared in a template file. For example a
-  service template can be referencing a parameter like 
+  This error appears sometines when a parameter is referenced
+  but not declared in a template file.
+  For example in a template file is calling {get_param: AodhPassword}
+  in the parameters section of the same template it must be defined.
+  Also a service template can be referencing a parameter like 
   aodh::db::mysql::password: {get_param: AodhPassword}
   defined in the base file.. This wont work as in the
   base file needs to be like:
